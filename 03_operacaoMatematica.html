@@ -9,11 +9,64 @@
     */
 
     //ENTRADA
-
+    const numero1 = Number(prompt(`Informe um número`));
+    const numero2 = Number(prompt(`Informe um  outro número`));
+    const operacao = prompt(`Qual operação deseja realizar?( X-Vezes M-mais N-menos é D-divisão.)`).toUpperCase();
 
     //PROCESSAMENTO
 
-    
+    switch (operacao) {
+        case "X":
+            resultado = numero1 * numero2;
+            alert(`A operação foi multiplicação então é ${resultado}`);
+            break;
+
+        case "M":
+            resultado = numero1 + numero2;
+            alert(`A operação foi adição então é ${resultado}`);
+            break;
+
+        case "N":
+
+            resultado = numero1 - numero2;
+            alert(`A operação foi subtração então é ${resultado}`);
+            break;
+
+        case "D":
+            resultado = numero1 / numero2;
+            alert(`A operação foi divisão então é ${resultado}`);
+            break;
+
+        default:
+            alert(` A operação `)
+            break;
+    }
+    if (resultado % 2 == 0) {
+        alert(`O seu número é par`);
+    }
+    else {
+        alert(`O seu número é ímpar`);
+    }
+
+    switch ((resultado % 1) == 0) {
+        case true:
+            alert("É inteiro");
+            break;
+        case false:
+            alert(`É decimal`);
+            break;
+    }
+    switch (resultado > 0) {
+        case true:
+            alert(`É positivo`);
+            break;
+
+        case false:
+            alert(`É negativo`);
+            break;
+    }
+
+
     //SAÍDA
 
 </script>
